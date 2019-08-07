@@ -7,4 +7,4 @@ COPY . ./
 RUN yarn build
 RUN npm install
 # start app
-CMD ["npm", "setup"]
+CMD ["npm", "run", "setup"]
