@@ -9,7 +9,6 @@ import Tab from '@material-ui/core/Tab';
 
 import Product from './Components/Product';
 import ProductListing from './Components/ProductListing';
-import ProductRecall from './Components/ProductRecall';
 
 function a11yProps(index) {
   return {
@@ -39,17 +38,11 @@ function App() {
           aria-label="scrollable auto tabs example"
         >
           <Tab icon={<img src={"https://logos-download.com/wp-content/uploads/2016/08/EY_logo_slogan.png"} height={"42"} />} {...a11yProps(0)} />
-          <Tab label="Product Recall" {...a11yProps(1)} />
         </Tabs>
       </AppBar>
 
       <header className="App-header">
-      {
-        value == 0 ?
-        <ProductListing /> :
-        <ProductRecall />
-      }
-
+      <ProductListing />
       </header>
     </div>
   );
